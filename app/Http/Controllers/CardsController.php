@@ -19,7 +19,7 @@ class CardsController extends Controller
 
     public function showAll() {
         $cards = Card::all();
-        return  response()->json($cards, 200);
+        return response()->json($cards, 200);
     }
 
     public function add(Request $request) {
@@ -27,7 +27,7 @@ class CardsController extends Controller
         $card = new Card();
         $card->card_text = $card_text;
         $card->save();
-        return  response()->json($card, 201);
+        return response()->json($card, 201);
     }
 
     public function edit(Request $request, $card_id) {
@@ -35,12 +35,19 @@ class CardsController extends Controller
         $card = Card::find($card_id);
         $card->card_text = $card_text;
         $card->save();
-        return  response()->json($card, 200);
+        return response()->json($card, 200);
+    }
+
+    public function like($card_id) {
+        $card = Card::find($card_id);
+        $card->card_likes++;
+        $card->save();
+        return response()->json($card, 200);
     }
 
     public function delete($card_id) {
         $card = Card::find($card_id);
         $card->delete();
-        return  response("Successfully deleted", 200);
+        return response("Successfully deleted", 200);
     }
 }

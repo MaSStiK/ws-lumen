@@ -68,7 +68,37 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost/cards/1/edit",
+					"raw": "http://localhost/cards/3/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cards",
+						"3",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cards/{card_id}/like",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "card_text",
+							"value": "new",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/cards/1/like",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -76,7 +106,7 @@
 					"path": [
 						"cards",
 						"1",
-						"edit"
+						"like"
 					]
 				}
 			},
