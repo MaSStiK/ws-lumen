@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Card;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 
 class CardsController extends Controller
@@ -19,6 +20,11 @@ class CardsController extends Controller
 
     public function showAll() {
         $cards = Card::all();
+
+        foreach ($cards as $card) {
+            $card['card_comments'] = Comment::all()->where('card_id', $card['id']);
+        }
+
         return response()->json($cards, 200);
     }
 

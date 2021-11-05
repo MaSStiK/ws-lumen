@@ -6,131 +6,247 @@
 	},
 	"item": [
 		{
-			"name": "cards",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost/cards",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"path": [
-						"cards"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "cards/add",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "card_text",
-							"value": "kyky",
-							"type": "text"
+			"name": "Cards",
+			"item": [
+				{
+					"name": "cards",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cards"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost/cards/add",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"path": [
-						"cards",
-						"add"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "cards/{card_id}/edit",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "card_text",
-							"value": "new",
-							"type": "text"
+				{
+					"name": "cards/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "card_text",
+									"value": "55866",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/cards/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cards",
+								"add"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost/cards/3/edit",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"path": [
-						"cards",
-						"3",
-						"edit"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "cards/{card_id}/like",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "card_text",
-							"value": "new",
-							"type": "text"
+				{
+					"name": "cards/{card_id}/edit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "card_text",
+									"value": "new",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/cards/3/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cards",
+								"3",
+								"edit"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost/cards/1/like",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"path": [
-						"cards",
-						"1",
-						"like"
-					]
+				{
+					"name": "cards/{card_id}/like",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/cards/3/like",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cards",
+								"3",
+								"like"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cards/{card_id}/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/cards/1/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cards",
+								"1",
+								"delete"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "cards/{card_id}/delete",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost/cards/1/delete",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"path": [
-						"cards",
-						"1",
-						"delete"
-					]
+			"name": "Comments",
+			"item": [
+				{
+					"name": "cards/{card_id}/comment/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "comment_text",
+									"value": "hello",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/cards/2/comment/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cards",
+								"2",
+								"comment",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cards/comment/{comment_id}/like",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/cards/comment/1/like",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cards",
+								"comment",
+								"1",
+								"like"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cards/comment/{comment_id}/dislike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/cards/comment/1/dislike",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cards",
+								"comment",
+								"1",
+								"dislike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cards/comment/{comment_id}/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "comment_text",
+									"value": "new com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/cards/comment/3/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"cards",
+								"comment",
+								"3",
+								"delete"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }
